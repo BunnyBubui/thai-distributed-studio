@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Thai Distributed Studio · สำหรับ Canva</title>
+<style>
+:root{--blue:#2a7bb5;--navy:#173e62;--ink:#1d3349;--muted:#71849a;--line:#dfe9f1;--bg:#f3f7fa;--surface:#fff;--corner:16px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Tahoma,'Noto Sans Thai',sans-serif;color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}.hero{background:#2a7bb5;color:#fff;padding:24px max(24px,calc((100vw - 1300px)/2));position:relative;overflow:hidden}.hero:before{content:'';position:absolute;right:2%;top:-85px;border:2px solid #ffffff55;border-radius:30px;width:280px;height:170px;transform:rotate(-20deg)}.hero h1{margin:0;font-size:clamp(23px,3vw,33px);letter-spacing:-.5px}.hero p{margin:6px 0 0;color:#e8f6ff;font-size:14px}.hero .eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;opacity:.82;margin-bottom:5px}.layout{max-width:1350px;margin:24px auto;padding:0 20px;display:grid;grid-template-columns:420px minmax(0,1fr);gap:20px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--corner);box-shadow:0 6px 28px #1a4c760c;min-width:0}.panelHead{padding:20px 20px 4px}.panelHead h2{font-size:18px;margin:0}.panelHead p{font-size:12px;color:var(--muted);margin:5px 0 0}.form{padding:18px 20px 20px}.form label,.controlLabel{font-size:13px;font-weight:700;display:block;margin-bottom:7px}.form textarea{width:100%;min-height:190px;border:1px solid #cbdce9;border-radius:11px;padding:12px 13px;line-height:1.8;font-size:15px;resize:vertical;outline-color:var(--blue)}.help{font-size:11px;color:var(--muted);line-height:1.7;margin:6px 0 0}.group{margin-top:18px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.controlRow{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}.value{font-weight:700;background:#eaf4fa;color:var(--navy);border-radius:7px;padding:3px 7px;font-size:12px}.slider{width:100%;accent-color:var(--blue)}select,.number{padding:11px;width:100%;background:#fff;border:1px solid #ccdae6;border-radius:10px;color:var(--ink);min-width:0}.colors{display:flex;align-items:center;gap:8px}.colors input{height:40px;width:50px;border:none;padding:0;cursor:pointer;background:transparent}.colors .hex{font-size:12px;color:var(--muted)}.checkline{display:flex;align-items:flex-start;gap:9px;font-size:12px;line-height:1.5}.checkline input{margin-top:3px;accent-color:var(--blue)}.buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}.btn{border-radius:10px;padding:12px;border:1px solid var(--blue);background:#fff;color:var(--blue);font-weight:700}.btnPrimary{background:var(--blue);color:#fff}.btn:hover{filter:brightness(.96)}.btn:focus-visible{outline:3px solid #99d3ef;outline-offset:2px}.status{font-size:12px;color:#4d7994;margin-top:12px;min-height:20px}.previewWrap{padding:20px;min-height:550px}.previewToolbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:18px}.pill{font-size:12px;color:var(--blue);background:#e9f4fb;padding:7px 9px;border-radius:99px;font-weight:700}.canvasArea{min-height:500px;overflow:auto;padding:22px;border-radius:12px;border:1px solid #d8e7f2;background-color:#fff;background-image:linear-gradient(45deg,#f0f3f6 25%,transparent 25%),linear-gradient(-45deg,#f0f3f6 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#f0f3f6 75%),linear-gradient(-45deg,transparent 75%,#f0f3f6 75%);background-position:0 0,0 10px,10px -10px,-10px 0;background-size:20px 20px}.previewPaper{width:max-content;min-width:1px;max-width:none;min-height:1px;background:transparent}.previewPaper svg{display:block;max-width:none}.hint{font-size:12px;line-height:1.85;color:#596f84;margin:14px 0 0}.footerNote{border-top:1px solid var(--line);padding:16px 20px;color:#637c91;font-size:12px;line-height:1.8}.dot{width:7px;height:7px;border-radius:99px;background:#36b37e;display:inline-block;margin-right:6px}@media(max-width:950px){.layout{grid-template-columns:1fr}.previewWrap{min-height:350px}.canvasArea{min-height:290px}}@media(max-width:480px){.layout{padding:0 10px;margin:12px auto}.hero{padding:20px 16px}.pair{grid-template-columns:1fr}.form{padding:16px}.panelHead{padding:16px 16px 4px}.previewWrap{padding:12px}.buttons{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="eyebrow">TYPESETTING TOOL · OFFLINE</div><h1>Thai Distributed Studio</h1><p>จัดข้อความภาษาไทยชิดทั้งสองขอบ · สำหรับโปสเตอร์ใน Canva · ส่งออกพื้นหลังโปร่งใส</p></header>
+<main class="layout">
+<section class="panel" aria-label="ตั้งค่าข้อความ"><div class="panelHead"><h2>ตั้งค่าข้อความ</h2><p>ระบบตัดบรรทัดโดยคำนึงถึงขอบเขตคำภาษาไทย</p></div>
+<div class="form">
+<label for="content">ข้อความที่ต้องการจัดเรียง</label>
+<textarea id="content" spellcheck="false">ในการพัฒนาเว็บแอปพลิเคชันตรวจจับและประเมินความเสี่ยงก่อนการหกล้มในผู้สูงอายุ โดยใช้ข้อมูลจากเซนเซอร์แบบสวมใส่ (Accelerometer และ Gyroscope) ร่วมกับการเรียนรู้เชิงลึกแบบลำดับ พบว่าระบบสามารถวิเคราะห์รูปแบบการเคลื่อนไหว ประเมินระดับความเสี่ยง และแสดงผลผ่าน Web Dashboard พร้อมแจ้งเตือนผู้ดูแลแบบเรียลไทม์เพื่อการเฝ้าระวังการหกล้มของผู้สูงอายุ</textarea>
+<p class="help"><strong>Tab</strong> เพื่อเยื้องข้อความ · เลือกหลายบรรทัดแล้วกด <strong>Tab</strong> เพื่อเยื้องทั้งชุด · <strong>Shift + Tab</strong> เพื่อลดการเยื้อง · Enter ขึ้นย่อหน้าใหม่ (ระยะ Tab จะแสดงใน PNG/SVG ด้วย)</p>
+<div class="group"><label for="tabSize">ความกว้าง Tab</label><select id="tabSize"><option value="2">2 ช่องว่าง</option><option value="4" selected>4 ช่องว่าง (แนะนำ)</option><option value="8">8 ช่องว่าง</option></select></div>
+<div class="group"><div class="controlRow"><label for="width">ความกว้างกล่องข้อความ</label><output class="value" id="widthVal">650 px</output></div><input class="slider" id="width" type="range" min="240" max="1000" step="10" value="650"></div>
+<div class="group"><div class="controlRow"><label for="size">ขนาดตัวอักษร</label><output class="value" id="sizeVal">30 px</output></div><input class="slider" id="size" type="range" min="14" max="72" step="1" value="30"></div>
+<div class="group"><div class="controlRow"><label for="leading">ระยะห่างบรรทัด</label><output class="value" id="leadingVal">1.65×</output></div><input class="slider" id="leading" type="range" min="1.20" max="2.40" step="0.05" value="1.65"></div>
+<div class="pair group"><div><label for="family">ฟอนต์</label><select id="family"><option value="Tahoma">Tahoma (แนะนำ)</option><option value="Sarabun">Sarabun</option><option value="TH Sarabun New">TH Sarabun New</option><option value="Noto Sans Thai">Noto Sans Thai</option><option value="Noto Looped Thai">Noto Looped Thai</option><option value="Arial">Arial</option></select></div><div><label for="weight">น้ำหนักฟอนต์</label><select id="weight"><option value="400">Regular</option><option value="500">Medium</option><option value="600">Semi Bold</option><option value="700">Bold</option></select></div></div>
+<div class="pair group"><div><label for="color">สีข้อความ</label><div class="colors"><input id="color" type="color" value="#172d43"><span id="hex" class="hex">#172d43</span></div></div><div><label for="mode">รูปแบบจัดแนว</label><select id="mode"><option value="distributed">กระจายแบบไทย (Thai Distributed)</option><option value="left">ชิดซ้ายปกติ</option></select></div></div>
+<div class="group"><label class="checkline"><input id="lastLine" type="checkbox"><span>กระจายบรรทัดสุดท้ายด้วย (ปกติไม่แนะนำ เพราะตัวอักษรอาจห่างมาก)</span></label></div>
+<div class="group"><label class="checkline"><input id="showGuide" type="checkbox" checked><span>แสดงเส้นขอบช่วยจัดวางในหน้าพรีวิว (ไม่ติดไปในไฟล์)</span></label></div>
+<div class="buttons"><button class="btn btnPrimary" id="pngBtn" type="button">↓ PNG โปร่งใส 4×</button><button class="btn" id="svgBtn" type="button">↓ SVG โปร่งใส</button></div>
+<div id="status" class="status" aria-live="polite"></div>
+</div><div class="footerNote">PNG จะรักษาหน้าตาที่เห็นได้แน่นอนกว่าเมื่อใส่ใน Canva ส่วน SVG ยังคงเป็นข้อความและอาจเปลี่ยนฟอนต์เมื่อ Canva นำเข้า</div>
+</section>
+<section class="panel" aria-label="ตัวอย่างข้อความ"><div class="panelHead"><h2>พรีวิวก่อนนำเข้า Canva</h2><p>พื้นที่ลายตารางแสดงส่วนโปร่งใสของภาพ</p></div><div class="previewWrap"><div class="previewToolbar"><span class="pill"><span class="dot"></span>Live Preview</span><span id="dimensions" class="pill">650 × 0 px</span></div><div class="canvasArea"><div id="preview" class="previewPaper"></div></div><p class="hint">ปรับความกว้างให้เท่ากับกล่องเนื้อหาในโปสเตอร์ จากนั้นโหลด PNG แล้วอัปโหลดเป็นภาพใน Canva สามารถย่อ/ขยายได้ แต่ควรหลีกเลี่ยงการขยายเกินขนาดต้นฉบับมากเกินไป</p></div></section>
+</main>
+<script>
+(() => {
+'use strict';
+const $ = id => document.getElementById(id);
+const fields = ['content','width','size','leading','family','weight','color','mode','lastLine','showGuide','tabSize'];
+const escapeXML = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&apos;');
+const segmenterWords = (typeof Intl.Segmenter==='function') ? new Intl.Segmenter('th',{granularity:'word'}) : null;
+const segmenterGrapheme = (typeof Intl.Segmenter==='function') ? new Intl.Segmenter('th',{granularity:'grapheme'}) : null;
+const graphemes = text => segmenterGrapheme ? [...segmenterGrapheme.segment(text)].map(x=>x.segment) : Array.from(text);
+const textWords = text => segmenterWords ? [...segmenterWords.segment(text)].map(x=>x.segment) : (text.match(/\s+|[^\s]+/gu)||[]);
+const metricsContext = document.createElement('canvas').getContext('2d');
+let latestSvg='', latestWidth=0,latestHeight=0, renderTimer;
+function getConfig(){return {content:$('content').value,width:+$('width').value,size:+$('size').value,leading:+$('leading').value,family:$('family').value,weight:$('weight').value,color:$('color').value,mode:$('mode').value,lastLine:$('lastLine').checked,showGuide:$('showGuide').checked,tabSize:+$('tabSize').value};}
+function wrapParagraph(p, width, measure, tabSize){
+ // Use non-breaking spaces for tabs, preserving their visual width in both SVG and PNG.
+ // Unlike ordinary whitespace, these are not removed at the start of a line.
+ p=p.replaceAll('\t', '\u00a0'.repeat(tabSize));
+ if(!p.length)return [''];
+ const chunks = textWords(p), result=[];
+ let current='';
+ const fit = str => measure(str)<=width;
+ function push(){if(current.length){result.push(current.replace(/ +$/gu,''));current='';}}
+ function appendOverlong(token){
+   for(const g of graphemes(token)){
+     if(current && !fit(current+g)){push();}
+     current += g;
+   }
+ }
+ for(const chunk of chunks){
+   if(!current){const clean=chunk.replace(/^ +/u,'');if(!clean)continue;if(fit(clean)){current=clean;}else{appendOverlong(clean);}continue;}
+   if(fit(current+chunk)){current+=chunk;continue;}
+   push();
+   const clean=chunk.replace(/^ +/u,'');
+   if(!clean)continue;
+   if(fit(clean)){current=clean;}else{appendOverlong(clean);}
+ }
+ push();return result.length?result:[''];
+}
+function setTextMetrics(cfg){metricsContext.font=`${cfg.weight} ${cfg.size}px "${cfg.family}", Tahoma, sans-serif`;metricsContext.textBaseline='alphabetic';}
+function createSvg(cfg){
+ setTextMetrics(cfg);const measure = str=>metricsContext.measureText(str).width;
+ const lines=[];
+ const paras=cfg.content.replaceAll('\r\n','\n').replaceAll('\r','\n').split('\n');
+ for(let p=0;p<paras.length;p++){
+   const wrapped=wrapParagraph(paras[p],cfg.width,measure,cfg.tabSize);
+   for(let i=0;i<wrapped.length;i++)lines.push({text:wrapped[i],last:i===wrapped.length-1});
+ }
+ const linePx=cfg.size*cfg.leading;
+ // Extra top and bottom room protects Thai vowel marks and descending signs from clipping.
+ const height=Math.max(Math.ceil(cfg.size*1.68),Math.ceil(cfg.size*1.34+(lines.length-1)*linePx+cfg.size*0.40));
+ const baseline=cfg.size*1.22;
+ const svgLines=lines.map((line,i)=>{
+   const text=line.text;
+   if(!text)return '';
+   // Preserve a fixed first-line indent while distributing the remaining Thai text.
+   const prefix=(text.match(/^[\u00a0 ]+/u)||[''])[0];
+   const body=text.slice(prefix.length);
+   const x=Math.min(cfg.width,measure(prefix));
+   const usableWidth=Math.max(0,cfg.width-x);
+   if(!body)return '';
+   const rawWidth=measure(body);
+   const spread=cfg.mode==='distributed' && (!line.last || cfg.lastLine) && graphemes(body).length>1 && rawWidth>0 && usableWidth>rawWidth;
+   const len=spread?` textLength="${usableWidth.toFixed(2)}" lengthAdjust="spacing"`:'';
+   return `<text x="${x.toFixed(2)}" y="${(baseline+i*linePx).toFixed(2)}"${len} xml:space="preserve">${escapeXML(body)}</text>`;
+ }).join('\n');
+ const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${cfg.width}" height="${height}" viewBox="0 0 ${cfg.width} ${height}" role="img" aria-label="จัดบรรทัดภาษาไทยแบบกระจาย"><g font-family="${escapeXML(cfg.family)}, Tahoma, sans-serif" font-size="${cfg.size}" font-weight="${cfg.weight}" fill="${escapeXML(cfg.color)}" stroke="none">${svgLines}</g></svg>`;
+ return {svg,height,lines:lines.length};
+}
+function render(){
+ const cfg=getConfig();$('widthVal').textContent=cfg.width+' px';$('sizeVal').textContent=cfg.size+' px';$('leadingVal').textContent=cfg.leading.toFixed(2)+'×';$('hex').textContent=cfg.color;
+ const built=createSvg(cfg);latestSvg=built.svg;latestWidth=cfg.width;latestHeight=built.height;
+ $('preview').innerHTML=built.svg;
+ $('preview').style.outline=cfg.showGuide?'1px dashed #2a7bb58e':'none';
+ $('dimensions').textContent=`${cfg.width} × ${built.height} px · ${built.lines} บรรทัด`;
+ $('status').textContent='พร้อมส่งออก · ขนาดโปร่งใส ไม่มีพื้นหลัง';
+}
+function triggerDownload(data,mime,name){const blob=new Blob([data],{type:mime});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000)}
+async function exportPng(){
+ const cfg=getConfig();const built=createSvg(cfg);const factor=4;const svgBlob=new Blob([built.svg],{type:'image/svg+xml;charset=utf-8'});const url=URL.createObjectURL(svgBlob);
+ $('status').textContent='กำลังสร้างไฟล์ PNG โปร่งใส…';
+ try{
+   await document.fonts.ready;
+   const img=new Image();
+   await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src=url;});
+   const canvas=document.createElement('canvas');canvas.width=cfg.width*factor;canvas.height=built.height*factor;
+   const context=canvas.getContext('2d');context.clearRect(0,0,canvas.width,canvas.height);context.drawImage(img,0,0,canvas.width,canvas.height);
+   const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
+   if(!blob)throw new Error('ไม่สามารถสร้าง PNG ได้');
+   const fileUrl=URL.createObjectURL(blob);const a=document.createElement('a');a.href=fileUrl;a.download='Thai-Distributed-Canva-transparent-4x.png';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(fileUrl),2000);
+   $('status').textContent=`ดาวน์โหลด PNG แล้ว · ${canvas.width} × ${canvas.height} พิกเซล`;
+ }catch(e){$('status').textContent='ส่งออก PNG ไม่สำเร็จ: '+e.message;}
+ finally{URL.revokeObjectURL(url);}
+}
+// Make Tab type inside the text editor rather than moving focus to the next control.
+// Multi-line selections work as block indentation; Shift+Tab removes one indent level.
+$('content').addEventListener('keydown',event=>{
+ if(event.key!=='Tab' || event.ctrlKey || event.metaKey || event.altKey)return;
+ event.preventDefault();
+ const area=event.currentTarget;
+ const text=area.value;
+ const start=area.selectionStart;
+ const end=area.selectionEnd;
+ const firstLineStart=text.lastIndexOf('\n',Math.max(0,start-1))+1;
+ const fullLineSelection=end>start && text.slice(start,end).includes('\n');
+ const indentSize=+$('tabSize').value;
+ if(fullLineSelection){
+   // Do not accidentally indent an extra line when the selection ends at its beginning.
+   const lastIncluded=end>start && text[end-1]==='\n' ? end-1 : end;
+   const original=text.slice(firstLineStart,lastIncluded);
+   const changed=original.split('\n').map(line=>event.shiftKey
+     ? line.replace(new RegExp('^(?:\\t| {1,'+indentSize+'})'), '')
+     : '\t'+line).join('\n');
+   area.setRangeText(changed,firstLineStart,lastIncluded,'end');
+   area.setSelectionRange(firstLineStart,firstLineStart+changed.length);
+ }else if(event.shiftKey){
+   const match=text.slice(firstLineStart).match(new RegExp('^(?:\\t| {1,'+indentSize+'})'));
+   if(match){
+     const n=match[0].length;
+     area.setRangeText('',firstLineStart,firstLineStart+n,'end');
+     area.setSelectionRange(Math.max(firstLineStart,start-n),Math.max(firstLineStart,end-n));
+   }
+ }else{
+   area.setRangeText('\t',start,end,'end');
+ }
+ area.dispatchEvent(new Event('input',{bubbles:true}));
+});
+fields.forEach(id=>$(id).addEventListener(id==='content'?'input':'change',()=>{clearTimeout(renderTimer);renderTimer=setTimeout(render,50);}));
+['width','size','leading','color'].forEach(id=>$(id).addEventListener('input',()=>{clearTimeout(renderTimer);renderTimer=setTimeout(render,25);}));
+$('svgBtn').addEventListener('click',()=>{render();triggerDownload(latestSvg,'image/svg+xml;charset=utf-8','Thai-Distributed-Canva-transparent.svg');$('status').textContent='ดาวน์โหลด SVG แล้ว · ตรวจสอบฟอนต์เมื่อนำเข้า Canva';});
+$('pngBtn').addEventListener('click',exportPng);
+render();
+})();
+</script>
+</body>
+</html>
