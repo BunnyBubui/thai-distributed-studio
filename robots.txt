@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bunnybubui.github.io/thai-distributed-studio/sitemap.xml
