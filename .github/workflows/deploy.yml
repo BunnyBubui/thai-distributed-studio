@@ -19,12 +19,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build website and sitemap
+        env:
+          SITE_URL: https://bunnybubui.github.io/thai-distributed-studio/
+        run: node scripts/build.mjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
-      - name: Upload static website
+      - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
-      - name: Deploy website
+          path: dist
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
